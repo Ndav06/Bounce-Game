@@ -27,7 +27,7 @@ def start_game(event):
         BRICK_COLOR = ["PeachPuff3","red", "black"]
         random.shuffle(BALL_COLOR)
         # Colour of the paddle
-        paddle = Paddle(canvas, "red")
+        paddle = Paddle(canvas, "black")
         bricks = []
         for i in range(0, 5):
             b = []
@@ -88,6 +88,7 @@ def start_game(event):
                     m=canvas.create_text(250, 250, text="Paused", fill="blue", font="Consolas 24 ")
                 root.update_idletasks()
                 root.update()
+                playing = False
 
 # Initial text in screen (x,y), and Start Button
 root.bind_all("<Return>", start_game)
